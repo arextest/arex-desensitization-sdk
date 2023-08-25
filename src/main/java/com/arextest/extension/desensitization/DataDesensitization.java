@@ -1,4 +1,4 @@
-package com.arextest.desensitization.extension;
+package com.arextest.extension.desensitization;
 
 /**
  * The extension interface is to encrypt the infos in DataBase and pageshow.

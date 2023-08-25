@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.arextest</groupId>
-    <artifactId>arex-desensitization-extension</artifactId>
+    <artifactId>arex-extension</artifactId>
     <version>0.0.1</version>
 
     <properties>
@@ -15,10 +15,10 @@
     </properties>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>Arex-desensitization-extension is a Java library that defines the extended interface of
-        desensitization.
+    <description>Arex-extension is a Java library that defines the extended interface of
+        arex.
     </description>
-    <url>https://github.com/arextest/arex-desensitization-sdk</url>
+    <url>https://github.com/arextest/arex-extension</url>
 
     <licenses>
         <license>
@@ -37,9 +37,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/arextest/arex-desensitization-sdk.git</connection>
-        <developerConnection>scm:git:ssh://github.com:arextest/arex-desensitization-sdk.git</developerConnection>
-        <url>https://github.com/arextest/arex-desensitization-sdk</url>
+        <connection>scm:git:git://github.com/arextest/arex-extension.git</connection>
+        <developerConnection>scm:git:ssh://github.com:arextest/arex-extension.git</developerConnection>
+        <url>https://github.com/arextest/arex-extension</url>
     </scm>
 
 
