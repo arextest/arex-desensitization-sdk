@@ -5,14 +5,20 @@ import javax.crypto.SecretKey;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class AesKeyReaderUtil {
     public static byte[] aesKey = null;
 
-    static {
-        writeAesKey("./aesKey.bin");
-        aesKey = readAesKey("./aesKey.bin");
+//    static {
+//        writeAesKey("./extension/aesKey.bin");
+//        aesKey = readAesKey("./extension/aesKey.bin");
+//        System.out.println("AesKeyReaderUtil init");
+//    }
+
+    public static void validAesKeyFileExist() {
+//        aesKey = readAesKey("./extension/aesKey.bin");
+        writeAesKey("./extension/aesKey.bin");
+        aesKey = readAesKey("./extension/aesKey.bin");
         System.out.println("AesKeyReaderUtil init");
     }
 
@@ -28,12 +34,16 @@ public class AesKeyReaderUtil {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+        } else {
+            throw new RuntimeException("aes key file not exist");
         }
         return keyBytes;
     }
 
     private static void writeAesKey(String keyFilePath) {
         try {
+            File extensionFolder = new File("./extension");
+            extensionFolder.mkdirs();
             // 生成AES密钥
             KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
             keyGenerator.init(256);  // 可以根据需要调整密钥长度
@@ -44,23 +54,9 @@ public class AesKeyReaderUtil {
             FileOutputStream fos = new FileOutputStream(keyFilePath);
             fos.write(keyBytes);
             fos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-    }
-
-    public static void main(String[] args) throws Exception {
-//        String message = "Hello, world! 小米";
-//        String keyFilePath = "./aeskey.bin";
-//        writeAesKey(keyFilePath);
-//        byte[] bytes = readAesKey(keyFilePath);
-//        DefaultDataDesensitization defaultDataDesensitization = new DefaultDataDesensitization();
-//        String encrypt = defaultDataDesensitization.encrypt(message, bytes);
-//        String decrypt = defaultDataDesensitization.decrypt(encrypt, bytes);
-//        System.out.println(decrypt);
-
     }
 
 }

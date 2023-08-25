@@ -47,8 +47,13 @@
     <dependencies>
         <dependency>
             <groupId>com.arextest</groupId>
-            <artifactId>arex-desensitization-extension</artifactId>
+            <artifactId>arex-extension</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
         </dependency>
     </dependencies>
 
@@ -149,8 +154,10 @@
         <profile>
             <id>jar-local</id>
             <properties>
-                <releases.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightrelease</releases.repo>
-                <snapshots.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightsnapshot</snapshots.repo>
+                <releases.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightrelease
+                </releases.repo>
+                <snapshots.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightsnapshot
+                </snapshots.repo>
             </properties>
             <build>
                 <plugins>
