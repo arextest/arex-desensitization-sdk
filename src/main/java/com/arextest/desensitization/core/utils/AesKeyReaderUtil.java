@@ -33,7 +33,7 @@ public class AesKeyReaderUtil {
         }
 
         int length = keyBytes.length;
-        if (length != 128 && length != 192 && length != 256) {
+        if (length != 128 || length != 192 || length != 256) {
             throw new RuntimeException("aes key file length error");
         }
         return keyBytes;
