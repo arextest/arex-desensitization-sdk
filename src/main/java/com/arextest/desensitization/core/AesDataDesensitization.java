@@ -26,31 +26,16 @@ public class AesDataDesensitization implements DataDesensitization {
 
     @Override
     public String encrypt(String s) throws Exception {
-        if (AesKeyReaderUtil.aesKey == null) {
-            return s;
-        }
         byte[] contentBytes = s.getBytes();
         byte[] encryptedContent = encryptAES(contentBytes, AesKeyReaderUtil.aesKey);
         return Base64.getEncoder().encodeToString(encryptedContent);
-//        return reverseString(s);
     }
 
     @Override
     public String decrypt(String s) throws Exception {
-        if (AesKeyReaderUtil.aesKey == null) {
-            return s;
-        }
         byte[] base64DecodeContent = Base64.getDecoder().decode(s);
         byte[] decryptedContent = decryptAES(base64DecodeContent, AesKeyReaderUtil.aesKey);
         return new String(decryptedContent);
-//        return reverseString(s);
-    }
-
-    private String reverseString(String s) {
-        if (s == null || s.isEmpty()) {
-            return s;
-        }
-        return new StringBuffer(s).reverse().toString();
     }
 
     /**
