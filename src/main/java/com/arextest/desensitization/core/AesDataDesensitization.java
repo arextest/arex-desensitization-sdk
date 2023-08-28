@@ -15,7 +15,7 @@ public class AesDataDesensitization implements DataDesensitization {
     private static Logger LOGGER = LoggerFactory.getLogger(AesDataDesensitization.class);
 
     static {
-        LOGGER.info("AesDataDesensitization init and validAesKeyFileExist");
+        LOGGER.info("init AesDataDesensitization and check aesKeyFile");
         try {
             AesKeyReaderUtil.validAesKeyFileExist();
         } catch (Exception e) {
