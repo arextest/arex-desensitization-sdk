@@ -1,0 +1,3 @@
+com.arextest.diff.service.impl.Base64DecompressImpl
+com.arextest.diff.service.impl.GzipDecompressImpl
+com.arextest.diff.service.impl.ZstdDecompressImpl
