@@ -6,7 +6,7 @@
 
   <groupId>com.arextest</groupId>
   <artifactId>arex-extension</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>8</maven.compiler.source>
@@ -37,6 +37,11 @@
       <groupId>org.apache.dubbo</groupId>
       <artifactId>dubbo</artifactId>
       <version>3.1.9</version>
+    </dependency>
+    <dependency>
+      <groupId>com.arextest</groupId>
+      <artifactId>arex-model</artifactId>
+      <version>1.1.36</version>
     </dependency>
   </dependencies>
 
@@ -154,8 +159,8 @@
     <profile>
       <id>jar-local</id>
       <properties>
-        <releases.repo></releases.repo>
-        <snapshots.repo></snapshots.repo>
+        <releases.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightrelease</releases.repo>
+        <snapshots.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightsnapshot</snapshots.repo>
       </properties>
     </profile>
   </profiles>
