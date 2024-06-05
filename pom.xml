@@ -6,7 +6,7 @@
 
   <groupId>com.arextest</groupId>
   <artifactId>arex-extension</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
 
   <properties>
     <maven.compiler.source>8</maven.compiler.source>
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.arextest</groupId>
       <artifactId>arex-model</artifactId>
-      <version>1.1.37-corydev-SNAPSHOT</version>
+      <version>1.2.2</version>
     </dependency>
   </dependencies>
 
@@ -159,8 +159,8 @@
     <profile>
       <id>jar-local</id>
       <properties>
-        <releases.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightrelease</releases.repo>
-        <snapshots.repo>http://maven.release.ctripcorp.com/nexus/content/repositories/flightsnapshot</snapshots.repo>
+        <releases.repo></releases.repo>
+        <snapshots.repo></snapshots.repo>
       </properties>
     </profile>
   </profiles>
